@@ -4,9 +4,9 @@
     Public Const EAT_GHOST_POINTS As Integer = 25
     Public Const EAT_PELLET_POINTS As Integer = 3
     Public Const EAT_SUPERPELLET_POINTS As Integer = 7
-    Public Const DIE_LOST_POINTS As Integer = 10
+    Public Const DIE_LOST_POINTS As Integer = 15
     Public Const STARTING_LIVES As Integer = 7
-    Public Const GHOST_SPEED As Integer = 2 'Lower is faster 
+    Public Const GHOST_SPEED As Integer = 1 'Lower is faster 
     Public Const PATMAN_SPEED As Integer = 1 'Lower is faster 
     Public Const KILL_GHOST_TIMELIMIT As Integer = 250 'Larger is longer time
 
