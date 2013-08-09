@@ -1,4 +1,5 @@
 ﻿Imports BasicPacMan.DynamicBitmap
+Imports BasicPacMan.FPS
 
 Public Class patmanMain
 
@@ -441,6 +442,7 @@ Public Class patmanMain
         StatBar.Text(LivesRemaining & " LIVES REMAINING", New Rectangle(New Point(10, 0), New Size(150, 15)), New Font("Ms Sans Serif", 14, FontStyle.Bold, GraphicsUnit.Pixel), New SolidBrush(Color.Red))
         If gameRunning = False Then StatBar.Text("Click arrow keys to begin", New Rectangle(New Point(335, 0), New Size(250, 15)), New Font("Ms Sans Serif", 12, FontStyle.Regular, GraphicsUnit.Pixel), New SolidBrush(Color.Red))
         StatBar.Text("SCORE: " & PlayerScore, New Rectangle(New Point(grid.Bitmap.Width - 150, 0), New Size(150, 15)), New Font("Ms Sans Serif", 15, FontStyle.Bold, GraphicsUnit.Pixel), New SolidBrush(Color.Red))
+        StatBar.Text("The Framerate or FPS is " & FrameRate.CalculateFrameRate(), New Rectangle(New Point(355, 0), New Size(250, 15)), New Font("Ms Sans Serif", 12, FontStyle.Regular, GraphicsUnit.Pixel), New SolidBrush(Color.Red))
     End Sub
     Public Sub DrawScreen()
         Dim G As Graphics = Me.CreateGraphics
