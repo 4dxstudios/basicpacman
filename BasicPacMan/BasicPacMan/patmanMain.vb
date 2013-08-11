@@ -386,7 +386,7 @@ Public Class patmanMain
         'Check to see if player has lost
         If LivesRemaining = 0 Then
             EndOfGameCheck = True
-            endMessage = "SORRY, YOU HAVE LOST!"
+            endMessage = "SORRY, YOU HAVE LOST! YOUR SCORE: " & PlayerScore
         End If
 
         Dim aPelleteFound As Boolean
@@ -401,7 +401,7 @@ Public Class patmanMain
 
         If aPelleteFound = False Then
             EndOfGameCheck = True
-            endMessage = "CONGRATULATIONS!  YOU HAVE WON.  FINAL SCORE: " & PlayerScore
+            endMessage = "CONGRATULATIONS!  YOU HAVE WON. GG! FINAL SCORE: " & PlayerScore
         End If
     End Function
     Public Sub DrawCharacters()
@@ -442,7 +442,7 @@ Public Class patmanMain
         StatBar.Text(LivesRemaining & " LIVES REMAINING", New Rectangle(New Point(10, 0), New Size(150, 15)), New Font("Ms Sans Serif", 14, FontStyle.Bold, GraphicsUnit.Pixel), New SolidBrush(Color.Red))
         If gameRunning = False Then StatBar.Text("Click arrow keys to begin", New Rectangle(New Point(335, 0), New Size(250, 15)), New Font("Ms Sans Serif", 12, FontStyle.Regular, GraphicsUnit.Pixel), New SolidBrush(Color.Red))
         StatBar.Text("SCORE: " & PlayerScore, New Rectangle(New Point(grid.Bitmap.Width - 150, 0), New Size(150, 15)), New Font("Ms Sans Serif", 15, FontStyle.Bold, GraphicsUnit.Pixel), New SolidBrush(Color.Red))
-        StatBar.Text("The Framerate or FPS is " & FrameRate.CalculateFrameRate(), New Rectangle(New Point(355, 0), New Size(250, 15)), New Font("Ms Sans Serif", 12, FontStyle.Regular, GraphicsUnit.Pixel), New SolidBrush(Color.Red))
+        If gameRunning = True Then StatBar.Text("The Framerate or FPS is " & FrameRate.CalculateFrameRate(), New Rectangle(New Point(355, 0), New Size(250, 15)), New Font("Ms Sans Serif", 12, FontStyle.Regular, GraphicsUnit.Pixel), New SolidBrush(Color.Red))
     End Sub
     Public Sub DrawScreen()
         Dim G As Graphics = Me.CreateGraphics
