@@ -73,7 +73,7 @@ Public Class patmanMain
 
 
     Private Sub patmanMain_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-        MsgBox("Debug Mode!")
+        'MsgBox("Debug Mode!")
         ResetGame()
         DrawRemainingPellets()
         DrawCharacters()
