@@ -8,7 +8,7 @@
     Public Const STARTING_LIVES As Integer = 7
     Public Const GHOST_SPEED As Integer = 2 'Lower is faster 
     Public Const PATMAN_SPEED As Integer = 1 'Lower is faster 
-    Public Const KILL_GHOST_TIMELIMIT As Integer = 250 'Larger is longer time
+    Public Const KILL_GHOST_TIMELIMIT As Integer = 120 'Larger is longer time
 
     Public Const DEBUG_MODE As Boolean = False
 
