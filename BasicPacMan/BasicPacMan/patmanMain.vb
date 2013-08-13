@@ -218,7 +218,7 @@ Public Class patmanMain
 
     End Sub
     Public Sub ResetCharacterLocations()
-        Patman.CurrentDirection = DynamicBitmap.Direction.East
+        Patman.CurrentDirection = DynamicBitmap.Direction.West
         Patman.Speed = PATMAN_SPEED
         Patman.Location = grid.Point(392)
         Patman.IsPatman = True
